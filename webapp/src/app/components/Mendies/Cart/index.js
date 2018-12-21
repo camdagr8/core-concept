@@ -1,4 +1,3 @@
-
 /**
  * -----------------------------------------------------------------------------
  * Imports
@@ -18,12 +17,15 @@ const mapStateToProps = (state, props) => ({
     ...props,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    add    : (data) => dispatch(deps.actions.Cart.add(data)),
-    hide   : () => dispatch(deps.actions.Cart.hide()),
-    mount  : (data) => dispatch(deps.actions.Cart.mount(data)),
-    remove : (data) => dispatch(deps.actions.Cart.remove(data)),
-    show   : () => dispatch(deps.actions.Cart.show()),
+const mapDispatchToProps = dispatch => ({
+    add: data => dispatch(deps.actions.Cart.add(data)),
+    hide: () => dispatch(deps.actions.Cart.hide()),
+    mount: data => dispatch(deps.actions.Cart.mount(data)),
+    remove: data => dispatch(deps.actions.Cart.remove(data)),
+    show: () => dispatch(deps.actions.Cart.show()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(Cart);

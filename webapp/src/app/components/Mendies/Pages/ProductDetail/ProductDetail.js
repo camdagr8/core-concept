@@ -3,13 +3,11 @@
  * Imports
  * -----------------------------------------------------------------------------
  */
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Template from 'components/Mendies/Template';
 import { Link } from 'react-router-dom';
 import products from 'components/Mendies/products';
-import Card from 'components/Mendies/Card';
 import _ from 'underscore';
-import op from 'object-path';
 
 /**
  * -----------------------------------------------------------------------------
@@ -29,7 +27,7 @@ export default class ProductDetail extends Component {
     render404({ title, className }) {
         return (
             <Template title={title} className={className}>
-                <main className={'main-content px-20'} role="main">
+                <main className={'main-content px-20'} role='main'>
                     <h1 className={'mb-10 mt-md-20 mt-lg-20 center left-md'}>
                         404 <span className={'px-10'}>/</span> Page not found{' '}
                     </h1>
@@ -66,13 +64,12 @@ export default class ProductDetail extends Component {
 
         return (
             <Template title={title} className={className}>
-                <main className={'container px-20'} role="main">
+                <main className={'container px-20'} role='main'>
                     <h1 className={'mb-10 mt-md-20 mt-lg-20'}>
                         <div className={'row center-xs center-sm start-md end'}>
                             <Link
                                 to={'/categories'}
-                                title={'go back to the main menu'}
-                            >
+                                title={'go back to the main menu'}>
                                 Menu
                             </Link>
                             <span className={'px-10'}>/</span>
@@ -81,8 +78,7 @@ export default class ProductDetail extends Component {
                                 className={'mb-6'}
                                 style={{ fontSize: '.5em' }}
                                 title={`${categoryName} menu items`}
-                                tabIndex={0}
-                            >
+                                tabIndex={0}>
                                 {categoryName}
                             </Link>
                         </div>
@@ -102,8 +98,7 @@ export default class ProductDetail extends Component {
                                 className={'btn-primary-lg-pill'}
                                 data-category={category}
                                 data-product={product}
-                                onClick={this.onOrderClick.bind(this)}
-                            >
+                                onClick={this.onOrderClick.bind(this)}>
                                 Add to Order
                             </button>
                         </div>

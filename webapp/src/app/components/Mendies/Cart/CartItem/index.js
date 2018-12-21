@@ -4,6 +4,7 @@
  * -----------------------------------------------------------------------------
  */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /**
  * -----------------------------------------------------------------------------
@@ -17,7 +18,7 @@ const CartItem = ({ category, id, image, index, name, onRemove }) => {
                 <img src={image} />
             </div>
             <div className='cart-item-title'>
-                <a href={`/category/${category}/${id}`}>{name}</a>
+                <Link to={`/category/${category}/${id}`}>{name}</Link>
             </div>
             <button
                 className='cart-item-remove'
