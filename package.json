@@ -1,0 +1,21 @@
+{
+    "name": "core",
+    "version": "1.0.0",
+    "description": "Updox core",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run local",
+        "local": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Cam Tullos <cam@tullos.ninja>",
+    "devDependencies": {
+        "action-sequence": "^1.0.3",
+        "babel-eslint": "^10.0.1",
+        "chalk": "^2.4.1",
+        "eslint": "^5.10.0",
+        "eslint-plugin-react": "^7.11.1",
+        "moment": "^2.23.0",
+        "nodemon": "^1.18.9"
+    }
+}
