@@ -3,7 +3,7 @@
  * Imports
  * -----------------------------------------------------------------------------
  */
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 /**
@@ -11,54 +11,30 @@ import { Link } from 'react-router-dom';
  * React Component: Card
  * -----------------------------------------------------------------------------
  */
-const Wrap = props => {
-    return props.url ? (
-        <Link
-            to={props.url}
-            className={`card ${props.className}`}
-            title={props.title}
-        >
-            {props.children}
+const Container = ({ url, className, title, children }) => {
+    return url ? (
+        <Link to={url} className={`card ${className}`} title={title}>
+            {children}
         </Link>
     ) : (
-        <div className={`card ${props.className}`}>{props.children}</div>
+        <div className={`card ${className}`}>{children}</div>
     );
 };
 
-export default class Card extends Component {
-    render() {
-        const {
-            url,
-            title,
-            subtitle,
-            footer,
-            image,
-            className = ''
-        } = this.props;
-        let hoverText = title || footer;
+const Card = ({ url, title, footer, image, className }) => (
+    <Container url={url} className={className} title={title || footer}>
+        {image && (
+            <span
+                className={'card-body'}
+                style={{ backgroundImage: `url('${image}')` }}
+            />
+        )}
+        {footer && (
+            <span className={'card-footer'}>
+                <h3>{footer}</h3>
+            </span>
+        )}
+    </Container>
+);
 
-        return (
-            <Wrap url={url} className={className} title={hoverText}>
-                {image ? (
-                    <span
-                        className={'card-body'}
-                        style={{ backgroundImage: `url('${image}')` }}
-                    />
-                ) : null}
-                {footer ? (
-                    <span className={'card-footer'}>
-                        <h3>{footer}</h3>
-                    </span>
-                ) : null}
-            </Wrap>
-        );
-    }
-}
-
-Card.defaultProps = {
-    image: null,
-    subtitle: null,
-    title: null,
-    url: null,
-    className: null
-};
+export default Card;
