@@ -85,6 +85,7 @@ module.exports = {
                 Home: require('components/Mendies/Pages/Home/route').default,
                 ProductDetail: require('components/Mendies/Pages/ProductDetail/route')
                     .default,
+                Pages: require('components/Mendies/Pages/route').default,
                 Toolkit: require('reactium-core/components/Toolkit/route')
                     .default,
             },
@@ -204,6 +205,7 @@ module.exports = {
                     'components/Mendies/Pages/Category/route',
                     'components/Mendies/Pages/Home/route',
                     'components/Mendies/Pages/ProductDetail/route',
+                    'components/Mendies/Pages/route',
                     'reactium-core/components/Toolkit/route',
                 ],
             },

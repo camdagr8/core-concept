@@ -48,7 +48,7 @@ const actions = {
         console.log(timestamp, chalk.bgGreen('  Started  '));
 
         return new Promise(resolve => {
-            const p = path.normalize(`./adapter/src/index.js`);
+            const p = path.normalize('./adapter/src/index.js');
 
             nodemon({
                 script: p,
