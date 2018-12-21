@@ -12,7 +12,7 @@ import React from 'react';
  */
 const CartFooter = ({ onClick }) => {
     return (
-        <div className={'cart-footer'}>
+        <div className='cart-footer'>
             <button
                 type='button'
                 className='btn-default-lg-pill btn-block'

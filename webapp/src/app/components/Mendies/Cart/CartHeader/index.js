@@ -12,7 +12,7 @@ import React from 'react';
  */
 const CartHeader = ({ onClick }) => {
     return (
-        <div className={'cart-header'}>
+        <div className='cart-header'>
             <button
                 type='button'
                 className='btn-cart-close'
