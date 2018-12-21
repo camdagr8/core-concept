@@ -22,10 +22,10 @@ export default class Template extends Component {
             <Fragment>
                 <Helmet>
                     <title>{title}</title>
-                    <html lang="en" />
+                    <html lang='en' />
                     <body className={className} />
                 </Helmet>
-                <div className={'container-fluid'}>
+                <div className='container-fluid'>
                     <Header />
                     {children}
                     <Footer />
@@ -37,6 +37,6 @@ export default class Template extends Component {
 }
 
 Template.defaultProps = {
-    title: "Mendie's Burgers",
-    className: 'home'
+    title: 'Mendie\'s Burgers',
+    className: 'home',
 };

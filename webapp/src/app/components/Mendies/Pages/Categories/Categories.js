@@ -34,10 +34,7 @@ export default class Categories extends Component {
                     <div className='row' style={{ marginBottom: 10 }}>
                         {products &&
                             products.map((item, i) => {
-                                let { name, image, id } = item;
-                                if (id === 1) {
-                                    name = null;
-                                }
+                                const { name, image, id } = item;
                                 return (
                                     <div
                                         className={
@@ -45,7 +42,7 @@ export default class Categories extends Component {
                                         }
                                         key={`category-${i}`}>
                                         <Card
-                                            footer={name}
+                                            footer={id === 1 ? null : name}
                                             url={`/category/${id}`}
                                             image={image}
                                             className={`card-${id}`}

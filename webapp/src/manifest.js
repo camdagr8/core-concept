@@ -13,7 +13,6 @@ module.exports = {
                     .default,
                 Category: require('components/Mendies/Pages/Category/actions')
                     .default,
-                Home: require('components/Mendies/Pages/Home/actions').default,
                 ProductDetail: require('components/Mendies/Pages/ProductDetail/actions')
                     .default,
                 Plugable: require('reactium-core/components/Plugable/actions')
@@ -31,8 +30,6 @@ module.exports = {
                     .default,
                 Category: require('components/Mendies/Pages/Category/actionTypes')
                     .default,
-                Home: require('components/Mendies/Pages/Home/actionTypes')
-                    .default,
                 ProductDetail: require('components/Mendies/Pages/ProductDetail/actionTypes')
                     .default,
                 Plugable: require('reactium-core/components/Plugable/actionTypes')
@@ -49,7 +46,6 @@ module.exports = {
                     .default,
                 Category: require('components/Mendies/Pages/Category/reducers')
                     .default,
-                Home: require('components/Mendies/Pages/Home/reducers').default,
                 ProductDetail: require('components/Mendies/Pages/ProductDetail/reducers')
                     .default,
                 Plugable: require('reactium-core/components/Plugable/reducers')
@@ -66,7 +62,6 @@ module.exports = {
                     .default,
                 Category: require('components/Mendies/Pages/Category/state')
                     .default,
-                Home: require('components/Mendies/Pages/Home/state').default,
                 ProductDetail: require('components/Mendies/Pages/ProductDetail/state')
                     .default,
                 Plugable: require('reactium-core/components/Plugable/state')
@@ -148,7 +143,6 @@ module.exports = {
                     'components/Mendies/Header/actions',
                     'components/Mendies/Pages/Categories/actions',
                     'components/Mendies/Pages/Category/actions',
-                    'components/Mendies/Pages/Home/actions',
                     'components/Mendies/Pages/ProductDetail/actions',
                     'reactium-core/components/Plugable/actions',
                     'reactium-core/components/Router/actions',
@@ -162,7 +156,6 @@ module.exports = {
                     'components/Mendies/Header/actionTypes',
                     'components/Mendies/Pages/Categories/actionTypes',
                     'components/Mendies/Pages/Category/actionTypes',
-                    'components/Mendies/Pages/Home/actionTypes',
                     'components/Mendies/Pages/ProductDetail/actionTypes',
                     'reactium-core/components/Plugable/actionTypes',
                     'reactium-core/components/Router/actionTypes',
@@ -176,7 +169,6 @@ module.exports = {
                     'components/Mendies/Header/reducers',
                     'components/Mendies/Pages/Categories/reducers',
                     'components/Mendies/Pages/Category/reducers',
-                    'components/Mendies/Pages/Home/reducers',
                     'components/Mendies/Pages/ProductDetail/reducers',
                     'reactium-core/components/Plugable/reducers',
                     'reactium-core/components/Router/reducers',
@@ -190,7 +182,6 @@ module.exports = {
                     'components/Mendies/Header/state',
                     'components/Mendies/Pages/Categories/state',
                     'components/Mendies/Pages/Category/state',
-                    'components/Mendies/Pages/Home/state',
                     'components/Mendies/Pages/ProductDetail/state',
                     'reactium-core/components/Plugable/state',
                     'reactium-core/components/Router/state',
