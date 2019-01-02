@@ -57,14 +57,28 @@ Before running Core you need to globally install Gulp:
 $ npm install -g gulp
 ```
 
-## 5. Install Node modules
+## 5. Install Node modules for Core
 
 ```
 $ cd /YOUR/CORE/DIRECTORY
 $ npm install
 ```
 
-## 6. Run Core
+## 6. Install Node modules for the front-end
+
+```
+$ cd /YOUR/CORE/DIRECTORY/webapp
+$ npm install
+```
+
+## 7. Install Node modules for back-end
+
+```
+$cd /YOUR/CORE/DIRECTORY/adapter
+$ npm install
+```
+
+## 8. Run Core
 
 ```
 $ cd /YOUR/CORE/DIRECTORY
