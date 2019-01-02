@@ -1,4 +1,3 @@
-
 /**
  * -----------------------------------------------------------------------------
  * Imports
@@ -18,10 +17,13 @@ const mapStateToProps = (state, props) => ({
     ...props,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    mount: () => dispatch(deps.actions.ProductDetail.mount()),
-    add: (data) => dispatch(deps.actions.Cart.add(data)),
-    remove: (data) => dispatch(deps.actions.Cart.remove(data)),
+const mapDispatchToProps = dispatch => ({
+    mount: data => dispatch(deps.actions.ProductDetail.mount(data)),
+    add: data => dispatch(deps.actions.Cart.add(data)),
+    remove: data => dispatch(deps.actions.Cart.remove(data)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(ProductDetail);

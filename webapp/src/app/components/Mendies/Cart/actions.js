@@ -1,7 +1,29 @@
 import deps from 'dependencies';
+import op from 'object-path';
 import TweenMax, { Power2 } from 'gsap';
 
 const actions = {
+    mount: data => (dispatch, getState) => {
+        const newData = { ...data };
+
+        const products = op.get(getState(), 'Categories.products') || [];
+
+        if (products.length < 1) {
+            newData['fetching'] = true;
+            dispatch(deps.actions.Categories.refresh()).then(() => {
+                dispatch(actions.mount(newData));
+            });
+        } else {
+            newData['products'] = products;
+            dispatch(actions.load());
+            dispatch(actions.subscribe());
+            dispatch({
+                type: deps.actionTypes.CART_MOUNT,
+                data: newData,
+            });
+        }
+    },
+
     add: data => dispatch => {
         dispatch({
             type: deps.actionTypes.CART_ADD,
@@ -54,18 +76,6 @@ const actions = {
                 }),
             )
             .catch(error => console.log(error));
-    },
-
-    mount: data => dispatch => {
-        dispatch({
-            type: deps.actionTypes.CART_MOUNT,
-            data,
-        });
-
-        dispatch(deps.actions.Categories.refresh()).then(() => {
-            dispatch(actions.load());
-            dispatch(actions.subscribe());
-        });
     },
 
     remove: data => dispatch => {

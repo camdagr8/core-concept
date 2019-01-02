@@ -6,7 +6,7 @@ import deps from 'dependencies';
 export default (state = {}, action) => {
     let newState, categoryID, productID, category, product, item, items, index;
 
-    const products = op.get(state, 'products') || [];
+    const { products } = state;
 
     switch (action.type) {
     case deps.actionTypes.CART_ADD:

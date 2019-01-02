@@ -1,22 +1,24 @@
 import deps from 'dependencies';
 import op from 'object-path';
 
-export default {
+const actions = {
     mount: data => (dispatch, getState) => {
-        dispatch(deps.actions.Cart.hide());
+        const newData = { ...data };
 
         const products = op.get(getState(), 'Categories.products') || [];
 
         if (products.length < 1) {
-            data['fetching'] = true;
+            newData['fetching'] = true;
             dispatch(deps.actions.Categories.refresh());
         } else {
-            data['products'] = products;
+            newData['products'] = products;
         }
 
         dispatch({
             type: deps.actionTypes.PRODUCTDETAIL_MOUNT,
-            data,
+            data: newData,
         });
     },
 };
+
+export default actions;

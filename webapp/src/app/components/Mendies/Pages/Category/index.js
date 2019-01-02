@@ -20,7 +20,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = dispatch => ({
     fetch: params => dispatch(deps.actions.Categories.fetch(params)),
-    mount: () => dispatch(deps.actions.Category.mount()),
+    mount: data => dispatch(deps.actions.Category.mount(data)),
     add: data => dispatch(deps.actions.Cart.add(data)),
     remove: data => dispatch(deps.actions.Cart.remove(data)),
     addFavorite: product =>

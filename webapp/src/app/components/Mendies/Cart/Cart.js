@@ -17,7 +17,7 @@ import CartItem from './CartItem';
 
 export default class Cart extends Component {
     componentDidMount() {
-        this.props.mount();
+        this.props.mount(this.props);
     }
 
     onRemove(e) {
