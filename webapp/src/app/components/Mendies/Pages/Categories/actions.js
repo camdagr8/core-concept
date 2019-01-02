@@ -14,20 +14,22 @@ const actions = {
         const { fetched, products } = getState()['Categories'];
 
         if (!fetched || !products) {
-            dispatch(actions.fetch(params));
+            return dispatch(actions.fetch(params));
         } else {
             const last = moment(fetched);
             const diff = moment().diff(last, 'minutes');
             if (diff >= 5) {
-                dispatch(actions.fetch(params));
+                return dispatch(actions.fetch(params));
             }
         }
+
+        return Promise.resolve();
     },
 
     fetch: (params = {}) => dispatch => {
         dispatch({ type: deps.actionTypes.CATEGORIES_FETCH });
 
-        deps.services.Categories.fetch(params)
+        return deps.services.Categories.fetch(params)
             .then(({ data }) => {
                 dispatch({
                     type: deps.actionTypes.CATEGORIES_FETCH_COMPLETE,

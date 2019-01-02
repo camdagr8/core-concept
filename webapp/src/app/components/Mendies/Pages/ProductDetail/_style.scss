@@ -3,6 +3,7 @@
     background-color: $color-white;
     color: $color-black;
     box-shadow: 0 0 10px 1px rgba($color-black, 0.125);
+    min-height: 70vh;
 
     &-wrapper {
         @extend .container;
@@ -68,8 +69,13 @@
         flex-grow: 1;
         img {
             width: 90%;
+            margin-top: 40px;
             margin-bottom: px2rem(20);
             margin-left: px2rem(20);
+
+            @include breakpoint(md) {
+                margin-top: 0;
+            }
         }
     }
 }

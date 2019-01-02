@@ -62,9 +62,10 @@ const actions = {
             data,
         });
 
-        dispatch(actions.load());
-
-        dispatch(actions.subscribe());
+        dispatch(deps.actions.Categories.refresh()).then(() => {
+            dispatch(actions.load());
+            dispatch(actions.subscribe());
+        });
     },
 
     remove: data => dispatch => {

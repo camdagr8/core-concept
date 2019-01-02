@@ -23,7 +23,7 @@ export default class Categories extends Component {
         const { error, products } = this.props;
 
         return (
-            <Template title="Order Online | Mendie\'s" className='categories'>
+            <Template title="Order Online | Mendie's" className='categories'>
                 <main className='main-content px-20' role='main'>
                     <h1 className='mb-10 mt-md-20 mt-lg-20 center left-md'>
                         Menu

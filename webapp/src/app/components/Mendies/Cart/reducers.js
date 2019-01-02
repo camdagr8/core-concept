@@ -1,10 +1,12 @@
 import _ from 'underscore';
 import op from 'object-path';
 import deps from 'dependencies';
-import products from 'components/Mendies/products';
+// import products from 'components/Mendies/products';
 
 export default (state = {}, action) => {
     let newState, categoryID, productID, category, product, item, items, index;
+
+    const products = op.get(state, 'products') || [];
 
     switch (action.type) {
     case deps.actionTypes.CART_ADD:
@@ -77,6 +79,13 @@ export default (state = {}, action) => {
             cartID: op.get(action, 'result.objectId'),
         };
         return newState;
+
+    case deps.actionTypes.CATEGORIES_FETCH_COMPLETE:
+        return {
+            ...state,
+            products: action.categories,
+            updated: Date.now(),
+        };
 
     default:
         return state;

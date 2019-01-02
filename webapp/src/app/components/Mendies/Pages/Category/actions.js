@@ -1,12 +1,17 @@
 import deps from 'dependencies';
+import op from 'object-path';
 
 const actions = {
-    mount: () => dispatch => {
+    mount: () => (dispatch, getState) => {
         dispatch({
             type: deps.actionTypes.CATEGORY_MOUNT,
         });
 
-        dispatch(deps.actions.Categories.refresh());
+        const products = op.get(getState(), 'Categories.products') || [];
+
+        if (products.length < 1) {
+            dispatch(deps.actions.Categories.refresh());
+        }
     },
 
     addFavorite: product => dispatch => {

@@ -6,8 +6,7 @@ export default (state = {}, action) => {
 
     switch (action.type) {
     case deps.actionTypes.CATEGORY_MOUNT:
-        newState = { ...state, ...action.data };
-        return newState;
+        return { fetching: false, ...state, ...action.data };
 
     case deps.actionTypes.CATEGORY_FAVORITE_ADD:
         newState = { ...state };
@@ -34,12 +33,11 @@ export default (state = {}, action) => {
         return newState;
 
     case deps.actionTypes.CATEGORIES_FETCH_COMPLETE:
-        newState = {
+        return {
             ...state,
             products: action.categories,
             updated: Date.now(),
         };
-        return newState;
 
     default:
         return state;

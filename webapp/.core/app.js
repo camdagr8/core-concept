@@ -76,7 +76,7 @@ if (elements.length > 0) {
  * -----------------------------------------------------------------------------
  */
 // Create the Redux store
-const store = storeCreator();
+export const store = storeCreator();
 deps.init();
 
 export const App = () => {
