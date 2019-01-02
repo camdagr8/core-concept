@@ -2,20 +2,26 @@
 
 ## 1. Install MongoDB
 
-If you don't already have it, get MongoDB up and running:
+If you don't already have it, get MongoDB up and running.
 
-> You can install MongoDB however you wish, I prefer Homebrew: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+#### Install Homebrew:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+#### Install MongoDB:
 
 ```
 $ brew install mongodb
 $ brew services start mongodb
 ```
 
-### 2. Create Default Databases
+> You can install MongoDB however you wish, this is just my preference.
 
-If this is your first time running MongoDB locally, you'll need to create the admin user account as well as your application database and user.
+## 2. Create Databases
 
-Root Admin:
+If this is your first time running MongoDB locally, you'll need to create the admin user account:
 
 ```
 $ mongo
@@ -23,7 +29,7 @@ $ use admin
 $ db.createUser({user:"admin", pwd:"PASSWORD", roles:[{role:"root", db:"admin"}]})
 ```
 
-Application User:
+Now you'll need the application user:
 
 ```
 $ use actinium
@@ -33,9 +39,9 @@ $ exit
 
 > Be sure to replace PASSWORD with the actual password you wish to use.
 
-### 2.1 Update Adapter Config
+## 3. Update Adapter Config
 
-You'll need to update the `/adapter/src/env.json` file `DATABASE_URI` with your database connection string:
+You'll need to update the `/adapter/src/env.json` file's `DATABASE_URI` property with your database connection string:
 
 ```
 ...
@@ -43,7 +49,7 @@ You'll need to update the `/adapter/src/env.json` file `DATABASE_URI` with your 
 ...
 ```
 
-## 3. Globally Install Gulp
+## 4. Globally Install Gulp
 
 Before running Core you need to globally install Gulp:
 
@@ -51,14 +57,14 @@ Before running Core you need to globally install Gulp:
 $ npm install -g gulp
 ```
 
-Now install the local node modules:
+## 5. Install Node modules
 
 ```
 $ cd /YOUR/CORE/DIRECTORY
 $ npm install
 ```
 
-## 4. Run Core
+## 6. Run Core
 
 ```
 $ cd /YOUR/CORE/DIRECTORY
