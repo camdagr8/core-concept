@@ -74,7 +74,7 @@ $ npm install
 ## 7. Install Node modules for back-end
 
 ```
-$cd /YOUR/CORE/DIRECTORY/adapter
+$ cd /YOUR/CORE/DIRECTORY/adapter
 $ npm install
 ```
 
