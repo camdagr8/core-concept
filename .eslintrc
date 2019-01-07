@@ -10,26 +10,12 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
+    "plugins": ["react"],
     "rules": {
-        "indent": [
-            "warn",
-            4
-        ],
-        "linebreak-style": [
-            "warn",
-            "unix"
-        ],
-        "quotes": [
-            "warn",
-            "single"
-        ],
-        "semi": [
-            "warn",
-            "always"
-        ],
+        "indent": ["warn", 4],
+        "linebreak-style": ["warn", "unix"],
+        "quotes": ["warn", "single"],
+        "semi": ["warn", "always"],
         "react/jsx-key": "warn",
         "react/jsx-no-duplicate-props": "error",
         "react/jsx-no-undef": 1,
@@ -39,6 +25,7 @@
         "react/require-render-return": "error",
         "no-unexpected-multiline": "off",
         "no-unreachable": "warn",
-        "no-unused-vars": "warn"
+        "no-unused-vars": "warn",
+        "no-undef": "error"
     }
 }
