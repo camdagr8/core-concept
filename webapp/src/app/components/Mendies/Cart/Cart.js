@@ -8,6 +8,7 @@ import CartEmpty from './CartEmpty';
 import CartFooter from './CartFooter';
 import CartHeader from './CartHeader';
 import CartItem from './CartItem';
+import classnames from 'classnames';
 
 /**
  * -----------------------------------------------------------------------------
@@ -27,8 +28,10 @@ export default class Cart extends Component {
 
     render() {
         const { visible = false, items = [], hide } = this.props;
-        const className =
-            visible === true ? 'cart cart-visible' : 'cart cart-hide';
+        const className = classnames('cart', {
+            'cart-visible': visible,
+            'cart-hide': !visible,
+        });
 
         return (
             <aside className={className} id='cart'>

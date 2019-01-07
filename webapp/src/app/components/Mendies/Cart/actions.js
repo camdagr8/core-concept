@@ -52,16 +52,19 @@ const actions = {
             right,
             ease,
             onComplete: () => {
-                body.style.overflow = 'auto';
                 TweenMax.set(cart, { display: 'none' });
                 TweenMax.set(cont, {
                     display: 'flex',
                     transform: 'translateX(-100%)',
                     right: 0,
                 });
+
                 dispatch({
                     type: deps.actionTypes.CART_HIDE,
                 });
+                cont.removeAttribute('style');
+                cart.removeAttribute('style');
+                body.style.overflow = 'auto';
             },
         });
     },
@@ -121,7 +124,14 @@ const actions = {
         let right = `-${w}px`;
         let ease = Power2.easeInOut;
 
-        TweenMax.from(cont, 0.125, { right, ease });
+        TweenMax.from(cont, 0.125, {
+            right,
+            ease,
+            onComplete: () => {
+                cont.removeAttribute('style');
+                cart.removeAttribute('style');
+            },
+        });
     },
 
     subscribe: () => (dispatch, getState) => {

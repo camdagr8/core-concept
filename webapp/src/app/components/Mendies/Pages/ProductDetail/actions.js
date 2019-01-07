@@ -14,6 +14,8 @@ const actions = {
             newData['products'] = products;
         }
 
+        document.body.style.overflow = 'auto';
+
         dispatch({
             type: deps.actionTypes.PRODUCTDETAIL_MOUNT,
             data: newData,
