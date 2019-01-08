@@ -1,5 +1,7 @@
 # Getting Started
 
+> If you would prefer using Docker to run this project, read the [Docker Compose](#docker-compose) instructions.
+
 ## 1. Install MongoDB
 
 If you don't already have it, get MongoDB up and running.
@@ -86,6 +88,7 @@ $ cd /YOUR/CORE/DIRECTORY
 $ docker-compose build
 $ docker-compose up
 ```
+
 ## 3. Add adapter user
 
 Connect to mongo container, and connect to mongo.

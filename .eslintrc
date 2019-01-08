@@ -25,7 +25,6 @@
         "react/require-render-return": "error",
         "no-unexpected-multiline": "off",
         "no-unreachable": "warn",
-        "no-unused-vars": "warn",
-        "no-undef": "error"
+        "no-unused-vars": "warn"
     }
 }

@@ -1,11 +1,10 @@
-import deps from 'dependencies';
 import op from 'object-path';
+import deps from 'dependencies';
 import TweenMax, { Power2 } from 'gsap';
 
 const actions = {
     mount: data => (dispatch, getState) => {
         const newData = { ...data };
-
         const products = op.get(getState(), 'Categories.products') || [];
 
         if (products.length < 1) {
