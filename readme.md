@@ -73,11 +73,11 @@ $ npm run local
 
 # Docker Compose
 
-# 1. Configure
+## 1. Configure
 
 Edit **docker/env.json** and **docker/mongo.txt** to reflect your desired mongo password.
 
-# 2. Build and start
+## 2. Build and start
 
 To build and start the app as docker containers.
 
@@ -86,7 +86,7 @@ $ cd /YOUR/CORE/DIRECTORY
 $ docker-compose build
 $ docker-compose up
 ```
-# 3. Add adapter user
+## 3. Add adapter user
 
 Connect to mongo container, and connect to mongo.
 
