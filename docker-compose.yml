@@ -1,5 +1,15 @@
 version: "3.2"
 services:
+  mongo:
+    image: mongo:latest
+    volumes:
+      - ./docker:/data/docker
+      - mongo:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: actinium
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /data/docker/mongo.txt
+    networks:
+      - be
   ui:
     build: ./webapp
     image: webapp:latest
@@ -14,16 +24,17 @@ services:
   api:
     build: ./adapter
     image: adapter:latest
+    ports:
+      - 9000:9000
+    volumes:
+      - ./docker:/usr/src/app/docker
+    environment:
+      ACTINIUM_ENV_FILE: /usr/src/app/docker/env.json
     networks:
       - fe
-      - be
-  mongo:
-    image: mongo:latest
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: actinium
-      MONGO_INITDB_ROOT_PASSWORD: NyM8TedbT4NlM67H
-    networks:
       - be
 networks:
   fe:
   be:
+volumes:
+  mongo:
