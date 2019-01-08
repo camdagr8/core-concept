@@ -64,23 +64,19 @@ $ cd /YOUR/CORE/DIRECTORY
 $ npm install
 ```
 
-## 6. Install Node modules for the front-end
-
-```
-$ cd /YOUR/CORE/DIRECTORY/webapp
-$ npm install
-```
-
-## 7. Install Node modules for back-end
-
-```
-$ cd /YOUR/CORE/DIRECTORY/adapter
-$ npm install
-```
-
-## 8. Run Core
+## 6. Run Core
 
 ```
 $ cd /YOUR/CORE/DIRECTORY
 $ npm run local
+```
+
+## Docker Compose
+
+To build and start the app as docker containers.
+
+```
+$ cd /YOUR/CORE/DIRECTORY
+$ docker-compose build
+$ docker-compose up
 ```
