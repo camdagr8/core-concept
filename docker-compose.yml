@@ -1,0 +1,29 @@
+version: "3.2"
+services:
+  ui:
+    build: ./webapp
+    image: webapp:latest
+    ports:
+      - 3030:3030
+    environment:
+      PARSE_APP_ID: Actinium
+      REST_API_URL: http://api:9000/api
+    networks:
+      - fe
+      - be
+  api:
+    build: ./adapter
+    image: adapter:latest
+    networks:
+      - fe
+      - be
+  mongo:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: actinium
+      MONGO_INITDB_ROOT_PASSWORD: NyM8TedbT4NlM67H
+    networks:
+      - be
+networks:
+  fe:
+  be:
