@@ -7,14 +7,6 @@ module.exports = {
     get: () => {
         return {
             allActions: {
-                Cart: require('components/Mendies/Cart/actions').default,
-                Header: require('components/Mendies/Header/actions').default,
-                Categories: require('components/Mendies/Pages/Categories/actions')
-                    .default,
-                Category: require('components/Mendies/Pages/Category/actions')
-                    .default,
-                ProductDetail: require('components/Mendies/Pages/ProductDetail/actions')
-                    .default,
                 Plugable: require('reactium-core/components/Plugable/actions')
                     .default,
                 Router: require('reactium-core/components/Router/actions')
@@ -23,15 +15,6 @@ module.exports = {
                     .default,
             },
             allActionTypes: {
-                Cart: require('components/Mendies/Cart/actionTypes').default,
-                Header: require('components/Mendies/Header/actionTypes')
-                    .default,
-                Categories: require('components/Mendies/Pages/Categories/actionTypes')
-                    .default,
-                Category: require('components/Mendies/Pages/Category/actionTypes')
-                    .default,
-                ProductDetail: require('components/Mendies/Pages/ProductDetail/actionTypes')
-                    .default,
                 Plugable: require('reactium-core/components/Plugable/actionTypes')
                     .default,
                 Router: require('reactium-core/components/Router/actionTypes')
@@ -40,14 +23,6 @@ module.exports = {
                     .default,
             },
             allReducers: {
-                Cart: require('components/Mendies/Cart/reducers').default,
-                Header: require('components/Mendies/Header/reducers').default,
-                Categories: require('components/Mendies/Pages/Categories/reducers')
-                    .default,
-                Category: require('components/Mendies/Pages/Category/reducers')
-                    .default,
-                ProductDetail: require('components/Mendies/Pages/ProductDetail/reducers')
-                    .default,
                 Plugable: require('reactium-core/components/Plugable/reducers')
                     .default,
                 Router: require('reactium-core/components/Router/reducers')
@@ -56,14 +31,6 @@ module.exports = {
                     .default,
             },
             allInitialStates: {
-                Cart: require('components/Mendies/Cart/state').default,
-                Header: require('components/Mendies/Header/state').default,
-                Categories: require('components/Mendies/Pages/Categories/state')
-                    .default,
-                Category: require('components/Mendies/Pages/Category/state')
-                    .default,
-                ProductDetail: require('components/Mendies/Pages/ProductDetail/state')
-                    .default,
                 Plugable: require('reactium-core/components/Plugable/state')
                     .default,
                 Router: require('reactium-core/components/Router/state')
@@ -72,22 +39,10 @@ module.exports = {
                     .default,
             },
             allRoutes: {
-                Cart: require('components/Mendies/Cart/route').default,
-                Categories: require('components/Mendies/Pages/Categories/route')
-                    .default,
-                Category: require('components/Mendies/Pages/Category/route')
-                    .default,
-                Home: require('components/Mendies/Pages/Home/route').default,
-                ProductDetail: require('components/Mendies/Pages/ProductDetail/route')
-                    .default,
-                Pages: require('components/Mendies/Pages/route').default,
                 Toolkit: require('reactium-core/components/Toolkit/route')
                     .default,
             },
             allServices: {
-                Cart: require('components/Mendies/Cart/services').default,
-                Categories: require('components/Mendies/Pages/Categories/services')
-                    .default,
                 Toolkit: require('reactium-core/components/Toolkit/services')
                     .default,
             },
@@ -139,11 +94,6 @@ module.exports = {
             allActions: {
                 type: 'actions',
                 imports: [
-                    'components/Mendies/Cart/actions',
-                    'components/Mendies/Header/actions',
-                    'components/Mendies/Pages/Categories/actions',
-                    'components/Mendies/Pages/Category/actions',
-                    'components/Mendies/Pages/ProductDetail/actions',
                     'reactium-core/components/Plugable/actions',
                     'reactium-core/components/Router/actions',
                     'reactium-core/components/Toolkit/actions',
@@ -152,11 +102,6 @@ module.exports = {
             allActionTypes: {
                 type: 'actionTypes',
                 imports: [
-                    'components/Mendies/Cart/actionTypes',
-                    'components/Mendies/Header/actionTypes',
-                    'components/Mendies/Pages/Categories/actionTypes',
-                    'components/Mendies/Pages/Category/actionTypes',
-                    'components/Mendies/Pages/ProductDetail/actionTypes',
                     'reactium-core/components/Plugable/actionTypes',
                     'reactium-core/components/Router/actionTypes',
                     'reactium-core/components/Toolkit/actionTypes',
@@ -165,11 +110,6 @@ module.exports = {
             allReducers: {
                 type: 'reducers',
                 imports: [
-                    'components/Mendies/Cart/reducers',
-                    'components/Mendies/Header/reducers',
-                    'components/Mendies/Pages/Categories/reducers',
-                    'components/Mendies/Pages/Category/reducers',
-                    'components/Mendies/Pages/ProductDetail/reducers',
                     'reactium-core/components/Plugable/reducers',
                     'reactium-core/components/Router/reducers',
                     'reactium-core/components/Toolkit/reducers',
@@ -178,11 +118,6 @@ module.exports = {
             allInitialStates: {
                 type: 'state',
                 imports: [
-                    'components/Mendies/Cart/state',
-                    'components/Mendies/Header/state',
-                    'components/Mendies/Pages/Categories/state',
-                    'components/Mendies/Pages/Category/state',
-                    'components/Mendies/Pages/ProductDetail/state',
                     'reactium-core/components/Plugable/state',
                     'reactium-core/components/Router/state',
                     'reactium-core/components/Toolkit/state',
@@ -190,23 +125,11 @@ module.exports = {
             },
             allRoutes: {
                 type: 'route',
-                imports: [
-                    'components/Mendies/Cart/route',
-                    'components/Mendies/Pages/Categories/route',
-                    'components/Mendies/Pages/Category/route',
-                    'components/Mendies/Pages/Home/route',
-                    'components/Mendies/Pages/ProductDetail/route',
-                    'components/Mendies/Pages/route',
-                    'reactium-core/components/Toolkit/route',
-                ],
+                imports: ['reactium-core/components/Toolkit/route'],
             },
             allServices: {
                 type: 'services',
-                imports: [
-                    'components/Mendies/Cart/services',
-                    'components/Mendies/Pages/Categories/services',
-                    'reactium-core/components/Toolkit/services',
-                ],
+                imports: ['reactium-core/components/Toolkit/services'],
             },
             allMiddleware: {
                 type: 'middleware',

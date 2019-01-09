@@ -1,3 +1,0 @@
-export default {
-    PRODUCTDETAIL_MOUNT: 'PRODUCTDETAIL_MOUNT',
-};

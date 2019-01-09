@@ -1,0 +1,94 @@
+// Root font-size:
+$root-font: 16px;
+
+$fonts: (
+    'opensans': 'Open Sans',
+);
+$font-family-base: Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+$font-weight-base: 400;
+$font-family-monospace: 'Courier New', Courier, monospace;
+$line-height-base: 1;
+
+$headings-margin-bottom: 0;
+
+$paragraph-margin-bottom: 15px;
+
+$dt-font-weight: 400;
+
+$table-cell-padding: 10px;
+$table-caption-color: inherit;
+
+$label-margin-bottom: 0;
+
+$sizing: (
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    72,
+    80,
+    100,
+    120,
+    140,
+    160,
+    180,
+    200
+);
+
+$text-alignment: ('left', 'right', 'center', 'justify');
+
+$headingsFont: 'Open Sans, sans-serif';
+$headings: (
+    h1: (
+        $headingsFont,
+        2rem,
+        100,
+    ),
+    h2: (
+        $headingsFont,
+        1.5rem,
+        100,
+    ),
+    h3: (
+        $headingsFont,
+        1.17rem,
+        100,
+    ),
+    h4: (
+        $headingsFont,
+        1rem,
+        100,
+    ),
+    h5: (
+        $headingsFont,
+        0.83rem,
+        100,
+    ),
+    h6: (
+        $headingsFont,
+        0.67rem,
+        100,
+    ),
+);
+
+$input-radius: 4px;
+
+// Color variables
+@import 'colors';
+
+// Grid grid-variables
+@import 'grid/grid-variables';
